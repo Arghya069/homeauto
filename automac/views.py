@@ -49,33 +49,33 @@ def ToggleLight2(request,pk):
     if gled.light_2==0:
         gled.light_2=1
         gled.save()
-        return redirect('getstat1',pk)
+        return redirect('getstat2',pk)
     else:
         gled.light_2=0
         gled.save()
-        return redirect('getstat1',pk)
+        return redirect('getstat2',pk)
     
 def ToggleLight3(request,pk):
     gled = GetLED.objects.get(device_id=pk)
     if gled.light_3==0:
         gled.light_3=1
         gled.save()
-        return redirect('getstat1',pk)
+        return redirect('getstat3',pk)
     else:
         gled.light_3=0
         gled.save()
-        return redirect('getstat1',pk)
+        return redirect('getstat3',pk)
     
 def ToggleLight4(request,pk):
     gled = GetLED.objects.get(device_id=pk)
     if gled.light_4==0:
         gled.light_4=1
         gled.save()
-        return redirect('getstat1',pk)
+        return redirect('getstat4',pk)
     else:
         gled.light_4=0
         gled.save()
-        return redirect('getstat1',pk)
+        return redirect('getstat4',pk)
     
 def sendControl(request,pk):
     gled=GetLED.objects.get(device_id=pk)
